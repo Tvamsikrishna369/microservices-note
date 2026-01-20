@@ -4,6 +4,7 @@
   "description": "Microservices Learning Project (NestJS)",
   "main": "index.js",
   "scripts": {
+    "prebuild": "npm install -g @nestjs/cli",
     "start": "concurrently \"npm run start:api-gateway\" \"npm run start:auth-service\" \"npm run start:notes-service\"",
     "start:api-gateway": "cd api-gateway && npm install && npm start",
     "start:auth-service": "cd auth-service && npm install && npm start",
