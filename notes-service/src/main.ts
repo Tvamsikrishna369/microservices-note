@@ -8,12 +8,16 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
-      forbidNonWhitelisted: true, 
+      forbidNonWhitelisted: true,
       transform: true,
     })
   )
 
-  await app.listen(process.env.PORT ?? 4001);
-  console.log("notes-service Running on Port:", process.env.PORT ?? 4001)
+  const port = process.env.PORT ?? 4001;
+  await app.listen(port);
+  console.log(`Notes Service Running on Port: ${port}`);
+
+  // await app.listen(process.env.PORT ?? 4001);
+  // console.log("notes-service Running on Port:", process.env.PORT ?? 4001)
 }
 bootstrap();

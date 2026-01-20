@@ -14,7 +14,11 @@ async function bootstrap() {
     }),
   )
 
-  await app.listen(process.env.PORT ?? 4000);
-  console.log("auth-service Running on Port:" ,4000)
+  const port = process.env.PORT ?? 4000;
+  await app.listen(port);
+  console.log(`Auth Service Running on Port: ${port}`);
+
+  // await app.listen(process.env.PORT ?? 4000);
+  // console.log("auth-service Running on Port:" ,4000)
 }
 bootstrap();
