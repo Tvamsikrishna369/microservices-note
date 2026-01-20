@@ -1,0 +1,19 @@
+{
+  "name": "microservices-note",
+  "version": "1.0.0",
+  "description": "Microservices Learning Project (NestJS)",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:api-gateway\" \"npm run start:auth-service\" \"npm run start:notes-service\"",
+    "start:api-gateway": "cd api-gateway && npm install && npm start",
+    "start:auth-service": "cd auth-service && npm install && npm start",
+    "start:notes-service": "cd notes-service && npm install && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
